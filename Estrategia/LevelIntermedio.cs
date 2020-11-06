@@ -5,26 +5,26 @@ using System.Linq;
 
 namespace DiarsT3.Estrategia
 {
-    public class NivelAvanzado : IRegistrarRutina
+    public class NivelIntermedio : IRegisterRoutine
     {
         private readonly DiarsT3Context context;
 
-        public NivelAvanzado()
+        public NivelIntermedio()
         {
             context = new DiarsT3Context();
         }
 
-        public void RegistrarEjercicios(Rutina rutina)
+        public void RegistrarEjercicios(Routine rutina)
         {
             var ejercicios = context.Ejercicios.ToList();
             var rand = new Random();
-            for (var i = 0; i < 15; i++)
+            for (var i = 0; i < 10; i++)
             {
-                var ejercicioRutina = new EjercicioRutina();
+                var ejercicioRutina = new ExerciseRoutine();
                 ejercicioRutina.RutinaId = rutina.Id;
                 var index = rand.Next(ejercicios.Count);
                 ejercicioRutina.EjercicioId = ejercicios[index].Id;
-                ejercicioRutina.Duracion = 120;
+                ejercicioRutina.Duracion = rand.Next(60, 121);
                 context.EjercicioRutinas.Add(ejercicioRutina);
                 context.SaveChanges();
             }

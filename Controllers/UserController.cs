@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DiarsT3.Controllers
 {
-    public class UsuarioController : Controller
+    public class UserController : Controller
     {
         private readonly DiarsT3Context context;
 
-        public UsuarioController()
+        public UserController()
         {
             context = new DiarsT3Context();
         }
@@ -18,13 +18,13 @@ namespace DiarsT3.Controllers
             return View();
         }
 
-        public IActionResult Registrar()
+        public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Registrar(Usuario usuario)
+        public IActionResult Register(User usuario)
         {
             if (!string.IsNullOrEmpty(usuario.Username) && !string.IsNullOrEmpty(usuario.Password))
             {

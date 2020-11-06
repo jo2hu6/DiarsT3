@@ -21,7 +21,7 @@ namespace DiarsT3.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(Usuario usuario)
+        public IActionResult Login(User usuario)
         {
             if (!string.IsNullOrEmpty(usuario.Username))
             {
@@ -29,7 +29,7 @@ namespace DiarsT3.Controllers
                 if (usuarioEncontrado != null)
                 {
                     HttpContext.Session.SetString("UsuarioId", usuarioEncontrado.Id.ToString());
-                    return RedirectToAction("Index", "Rutina");
+                    return RedirectToAction("Index", "Routine");
                 }
             }
             ViewBag.LoginError = "Datos incorrectos";

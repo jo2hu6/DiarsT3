@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace DiarsT3.Models
 {
-    public class EjercicioRutina
+    public class ExerciseRoutine
     {
         public int Id { get; set; }
         public int RutinaId { get; set; }
         public int EjercicioId { get; set; }
         public int Duracion { get; set; }
-        public Rutina Rutina { get; set; }
-        public Ejercicio Ejercicio { get; set; }
+        public Routine Rutina { get; set; }
+        public Exercise Ejercicio { get; set; }
     }
 }

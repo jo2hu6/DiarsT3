@@ -10,10 +10,10 @@ namespace DiarsT3.DB.Context
 {
     public class DiarsT3Context : DbContext
     {
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Ejercicio> Ejercicios { get; set; }
-        public DbSet<Rutina> Rutinas { get; set; }
-        public DbSet<EjercicioRutina> EjercicioRutinas { get; set; }
+        public DbSet<User> Usuarios { get; set; }
+        public DbSet<Exercise> Ejercicios { get; set; }
+        public DbSet<Routine> Rutinas { get; set; }
+        public DbSet<ExerciseRoutine> EjercicioRutinas { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -26,10 +26,10 @@ namespace DiarsT3.DB.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new UsuarioMap());
-            modelBuilder.ApplyConfiguration(new EjercicioMap());
-            modelBuilder.ApplyConfiguration(new RutinaMap());
-            modelBuilder.ApplyConfiguration(new EjercicioRutinaMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new ExerciseMap());
+            modelBuilder.ApplyConfiguration(new RoutineMap());
+            modelBuilder.ApplyConfiguration(new ExerciseRoutineMap());
         }
     }
 }

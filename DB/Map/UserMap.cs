@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DiarsT3.DB.Map
 {
-    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
+    public class UserMap : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<Usuario> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("Usuario");
+            builder.ToTable("User");
             builder.HasKey(o => o.Id);
         }
     }

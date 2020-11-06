@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DiarsT3.Controllers
 {
-    public class RutinaController : Controller
+    public class RoutineController : Controller
     {
         private readonly DiarsT3Context context;
 
-        public RutinaController()
+        public RoutineController()
         {
             context = new DiarsT3Context();
         }
@@ -28,13 +28,13 @@ namespace DiarsT3.Controllers
             return RedirectToAction("Login", "Auth");
         }
 
-        public IActionResult Registrar()
+        public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Registrar(Rutina rutina)
+        public IActionResult Register(Routine rutina)
         {
             if (!string.IsNullOrEmpty(rutina.Nombre))
             {
@@ -44,13 +44,13 @@ namespace DiarsT3.Controllers
                 context.SaveChanges();
                 var registradorEjercicios = new RegistradorDeEjercicios(rutina);
                 registradorEjercicios.RegistrarEjercicios();
-                return RedirectToAction("Index", "Rutina");
+                return RedirectToAction("Index", "Routine");
             }
             ModelState.AddModelError("Error", "Los datos ingresados no son válidos");
             return View();
         }
 
-        public IActionResult Detalle(int id)
+        public IActionResult Detail(int id)
         {
             var rutina = context.Rutinas.Include(o => o.EjercicioRutinas).ThenInclude(o => o.Ejercicio).Where(x => x.Id == id).FirstOrDefault();
             return View(rutina);

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DiarsT3.DB.Map
 {
-    public class EjercicioMap : IEntityTypeConfiguration<Ejercicio>
+    public class ExerciseMap : IEntityTypeConfiguration<Exercise>
     {
-        public void Configure(EntityTypeBuilder<Ejercicio> builder)
+        public void Configure(EntityTypeBuilder<Exercise> builder)
         {
-            builder.ToTable("Ejercicio");
+            builder.ToTable("Exercise");
             builder.HasKey(o => o.Id);
             builder.HasMany(o => o.EjercicioRutinas).WithOne(o => o.Ejercicio).HasForeignKey(o => o.EjercicioId);
         }

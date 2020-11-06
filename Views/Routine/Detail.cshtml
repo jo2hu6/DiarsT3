@@ -1,0 +1,30 @@
+﻿@model DiarsT3.Models.Routine
+
+<h3>Rutina: @Model.Nombre</h3>
+<h5>Tipo: @Model.Tipo</h5>
+
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ejercicio</th>
+                    <th>Link Youtube</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ejercicio in Model.EjercicioRutinas)
+                {
+                    <tr>
+                        <td>@ejercicio.Ejercicio.Nombre </td>
+                        <td>@ejercicio.Ejercicio.LinkYoutube </td>
+                        <td>@ejercicio.Duracion segundos</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a style="margin-left:85%;margin-bottom:5%" href="/Routine/Index" class="btn btn-danger">Regresar</a>
+    </div>
+</div>

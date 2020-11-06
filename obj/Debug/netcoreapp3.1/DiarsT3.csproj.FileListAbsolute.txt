@@ -147,7 +147,7 @@ C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\DiarsT3.dll
 C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\DiarsT3.pdb
 C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\DiarsT3.genruntimeconfig.cache
 C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
-C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Rutina\Detalle.cshtml.g.cs
-C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Rutina\Index.cshtml.g.cs
-C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Rutina\Registrar.cshtml.g.cs
-C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Registrar.cshtml.g.cs
+C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Routine\Detail.cshtml.g.cs
+C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Routine\Index.cshtml.g.cs
+C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\Routine\Register.cshtml.g.cs
+C:\Users\joshu\source\repos\DiarsT3\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs

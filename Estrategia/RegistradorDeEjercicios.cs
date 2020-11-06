@@ -8,15 +8,15 @@ namespace DiarsT3.Estrategia
 {
     public class RegistradorDeEjercicios
     {
-        private IRegistrarRutina registrador;
-        private Rutina rutina;
+        private IRegisterRoutine registrador;
+        private Routine rutina;
 
-        public RegistradorDeEjercicios(Rutina rutina)
+        public RegistradorDeEjercicios(Routine rutina)
         {
             this.rutina = rutina;
             if (rutina.Tipo == TipoRutina.AVANZADO)
             {
-                registrador = new NivelAvanzado();
+                registrador = new LevelAvanzado();
             }
             else if (rutina.Tipo == TipoRutina.INTERMEDIO)
             {
@@ -24,7 +24,7 @@ namespace DiarsT3.Estrategia
             }
             else
             {
-                registrador = new NivelPrincipiante();
+                registrador = new LevelPrincipiante();
             }
         }
 

@@ -1,5 +1,5 @@
 ﻿
-<h1>Iniciar sesión</h1>
+<h1 style="text-align:center">Iniciar sesión</h1>
 
 <div class="row">
     <div class="col-3"></div>
@@ -15,10 +15,11 @@
             </div>
             @if (ViewBag.LoginError != null)
             {
-<div class="alert alert-danger">
-    @ViewBag.LoginError
-</div>            }
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+                <div class="alert alert-danger">
+                    @ViewBag.LoginError
+                </div>            
+            }
+            <button style="margin-left:40%" type="submit" class="btn btn-success">Ingresar</button>
         </form>
     </div>
     <div class="col-3"></div>

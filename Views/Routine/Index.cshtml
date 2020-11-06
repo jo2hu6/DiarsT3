@@ -1,0 +1,35 @@
+﻿@model List<DiarsT3.Models.Routine>
+
+<h1 style="text-align:center">Mis rutinas</h1>
+
+<div class="row mb-3">
+    <div class="col">
+        <a href="/Routine/Register" class="btn btn-success">Registrar rutina</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Rutina</th>
+                    <th>Duración</th>
+                    <th>Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rutina in Model)
+                {
+                    <tr>
+                        <td>@rutina.Nombre </td>
+                        <td>@rutina.CalcularDuracion() segundos </td>
+                        <td>
+                            <a href="/Routine/Detail/@rutina.Id" class="btn btn-warning">Detalle</a>
+                        </td>
+                    </tr>
+                 }
+            </tbody>
+        </table>
+    </div>
+</div>

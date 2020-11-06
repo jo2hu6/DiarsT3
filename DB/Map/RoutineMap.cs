@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DiarsT3.DB.Map
 {
-    public class RutinaMap : IEntityTypeConfiguration<Rutina>
+    public class RoutineMap : IEntityTypeConfiguration<Routine>
     {
-        public void Configure(EntityTypeBuilder<Rutina> builder)
+        public void Configure(EntityTypeBuilder<Routine> builder)
         {
-            builder.ToTable("Rutina");
+            builder.ToTable("Routine");
             builder.HasKey(o => o.Id);
             builder.HasMany(o => o.EjercicioRutinas).WithOne(o => o.Rutina).HasForeignKey(o => o.RutinaId);
         }

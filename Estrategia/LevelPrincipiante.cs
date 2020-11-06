@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace DiarsT3.Estrategia
 {
-    public class NivelPrincipiante : IRegistrarRutina
+    public class LevelPrincipiante : IRegisterRoutine
     {
         private readonly DiarsT3Context context;
 
-        public NivelPrincipiante()
+        public LevelPrincipiante()
         {
             context = new DiarsT3Context();
         }
 
-        public void RegistrarEjercicios(Rutina rutina)
+        public void RegistrarEjercicios(Routine rutina)
         {
             var ejercicios = context.Ejercicios.ToList();
             var rand = new Random();
             for (var i = 0; i < 5; i++)
             {
-                var ejercicioRutina = new EjercicioRutina();
+                var ejercicioRutina = new ExerciseRoutine();
                 ejercicioRutina.RutinaId = rutina.Id;
                 var index = rand.Next(ejercicios.Count);
                 ejercicioRutina.EjercicioId = ejercicios[index].Id;

@@ -12,14 +12,14 @@ namespace DiarsT3.Models
         public const string AVANZADO = "Avanzado";
     }
 
-    public class Rutina
+    public class Routine
     {
         public int Id { get; set; }
         public int UsuarioId { get; set; }
         public string Nombre { get; set; }
         public string Tipo { get; set; }
-        public Usuario Usuario { get; set; }
-        public List<EjercicioRutina> EjercicioRutinas { get; set; }
+        public User Usuario { get; set; }
+        public List<ExerciseRoutine> EjercicioRutinas { get; set; }
 
         public int CalcularDuracion()
         {
